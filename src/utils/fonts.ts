@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 
 const MonetDisplayFont = localFont({
-	src: "./Dream_Avenue.ttf",
+	src: "../../public/fonts/Dream Avenue.ttf",
 	display: "swap",
 });
 
