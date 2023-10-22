@@ -5,4 +5,15 @@ const MonetDisplayFont = localFont({
 	display: "swap",
 });
 
-export default MonetDisplayFont;
+const CoolCodeFont = localFont({
+	src: "../../public/fonts/FiraCode-Regular.ttf", 
+	display : 'swap'
+})
+
+const RecognitionFont = localFont({
+	src: "../../public/fonts/NotoSerifDisplay-Italic-VariableFont_wdth,wght.ttf", 
+	display : 'swap'
+})
+
+
+export { MonetDisplayFont, CoolCodeFont , RecognitionFont};

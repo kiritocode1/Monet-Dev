@@ -11,8 +11,8 @@ import {
 import { UserButton } from "@clerk/nextjs";
 
 
-import { Camera , SearchIcon} from 'lucide-react';
-import MonetDisplayFont from '@/utils/fonts';
+import {  SearchIcon} from 'lucide-react';
+import {MonetDisplayFont} from '@/utils/fonts';
 
 
 
@@ -33,12 +33,12 @@ const MainNextNavBar: FC<MainNextNavBarProps> = ({}) => {
 			<NavbarContent justify="start">
 				<NavbarBrand className="mr-4">
 					
-					<p className={`${MonetDisplayFont.className} `}>MONET</p>
+					<Link href='/'  color="foreground" className={`${MonetDisplayFont.className} `}>MONET</Link>
 				</NavbarBrand>
 				<NavbarContent className="hidden sm:flex gap-3">
 					<NavbarItem>
 						<Link color="foreground" href="#">
-							Features
+							Apis
 						</Link>
 					</NavbarItem>
 					<NavbarItem isActive>
@@ -47,8 +47,8 @@ const MainNextNavBar: FC<MainNextNavBarProps> = ({}) => {
 						</Link>
 					</NavbarItem>
 					<NavbarItem>
-						<Link color="foreground" href="#">
-							Integrations
+						<Link color="foreground" href="/documentation">
+							Documentation
 						</Link>
 					</NavbarItem>
 				</NavbarContent>

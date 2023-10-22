@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import MonetDisplayFont from '@/utils/fonts'
+import {MonetDisplayFont} from '@/utils/fonts'
 interface pageProps {
   
 }
