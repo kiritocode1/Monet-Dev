@@ -8,7 +8,7 @@ import {
 	Input,
 
 } from "@nextui-org/react";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton  , auth} from "@clerk/nextjs";
 
 
 import {  SearchIcon} from 'lucide-react';
@@ -27,7 +27,8 @@ interface MainNextNavBarProps {
   
 }
 
-const MainNextNavBar: FC<MainNextNavBarProps> = ({}) => {
+const MainNextNavBar: FC<MainNextNavBarProps> = ({ }) => {
+	const { userId } = auth();
   return (
 		<Navbar isBordered isBlurred shouldHideOnScroll >
 			<NavbarContent justify="start">

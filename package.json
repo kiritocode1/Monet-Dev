@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.25.6",
+    "@clerk/themes": "^1.7.8",
     "@nextui-org/react": "^2.1.13",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.288.0",

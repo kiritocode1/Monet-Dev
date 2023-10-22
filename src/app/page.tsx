@@ -25,7 +25,7 @@ export default function Home() {
 			</h3>
 			<div className="flex justify-center w-full mt-20">
 				
-				<Button color="secondary" size="lg" variant="light">
+				<Button color="secondary" size="lg" variant="light" >
 					Learn More <ArrowRightSquare size={24} />
 				</Button>
 			</div>
