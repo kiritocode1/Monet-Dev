@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Providers from '@/lib/providers';
 import ClientSideProviders  from '@/lib/ClientSideProviders';
+import MainNextNavBar from '@/components/ui/MainNextNavbar';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,7 +21,10 @@ export default function RootLayout({
 			<html lang="en">
 				<body className={inter.className}>
 					<ClientSideProviders>
-						<main className='dark text-foreground bg-background'>{children}</main>
+					  <main className='dark text-foreground bg-background'>
+						  <MainNextNavBar/>
+						  {children}
+					  </main>
 					</ClientSideProviders>
 				</body>
 			</html>

@@ -1,7 +1,7 @@
 
 import { Button} from "@nextui-org/react";
 import localFont from "next/font/local";
-import MainNextNavBar from "@/components/ui/MainNextNavbar";
+
 import { ArrowRightSquare } from "lucide-react";
 
 const MonetDisplayFont = localFont({
@@ -14,7 +14,7 @@ import { RecognitionFont } from "@/utils/fonts";
 export default function Home() {
 	return (
 		<div className="min-h-screen w-full">
-			<MainNextNavBar />
+			
 
 			<h1
 				className={`${MonetDisplayFont.className} text-amber-700 lg:text-9xl  text-center`}>

@@ -1,3 +1,4 @@
+'use client'
 import { FC } from 'react'
 import {
 	Navbar,
@@ -8,7 +9,7 @@ import {
 	Input,
 
 } from "@nextui-org/react";
-import { UserButton  , auth} from "@clerk/nextjs";
+import { UserButton  } from "@clerk/nextjs";
 
 
 import {  SearchIcon} from 'lucide-react';
@@ -28,27 +29,37 @@ interface MainNextNavBarProps {
 }
 
 const MainNextNavBar: FC<MainNextNavBarProps> = ({ }) => {
-	const { userId } = auth();
+	
+	let stt = [false  , false , false]
   return (
-		<Navbar isBordered isBlurred shouldHideOnScroll >
+		<Navbar isBordered isBlurred shouldHideOnScroll>
 			<NavbarContent justify="start">
 				<NavbarBrand className="mr-4">
-					
-					<Link href='/'  color="foreground" className={`${MonetDisplayFont.className} `}>MONET</Link>
+					<Link
+						href="/"
+						color="foreground"
+						className={`${MonetDisplayFont.className} `}>
+						MONET
+					</Link>
 				</NavbarBrand>
-				<NavbarContent className="hidden sm:flex gap-3">
-					<NavbarItem>
-						<Link color="foreground" href="#">
+				<NavbarContent className="hidden sm:flex gap-3" >
+					<NavbarItem isActive={stt[0]}>
+					  <Link color={stt[0] ? "secondary" : "foreground"} href="/premade_api" >
 							Apis
 						</Link>
 					</NavbarItem>
-					<NavbarItem isActive>
-						<Link href="#" aria-current="page" color="secondary">
+					<NavbarItem >
+						<Link
+							href="#"
+							
+							color={stt[1] ? "secondary" : "foreground"}>
 							Customers
 						</Link>
 					</NavbarItem>
 					<NavbarItem>
-						<Link color="foreground" href="/documentation">
+						<Link
+							color={stt[2] ? "secondary" : "foreground"}
+							href="/documentation">
 							Documentation
 						</Link>
 					</NavbarItem>
