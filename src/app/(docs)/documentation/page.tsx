@@ -5,7 +5,7 @@ interface pageProps {
 }
 
 const page: FC<pageProps> = ({}) => {
-  return <div className={`min-h-screen w-full sm:text-3xl ${MonetDisplayFont.className}`}>docs page</div>
+  return <div className={`min-h-screen w-full   sm:text-9xl ${MonetDisplayFont.className}`}>M</div>
 }
 
 export default page

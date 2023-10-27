@@ -6,10 +6,22 @@ import ClientSideProviders  from '@/lib/ClientSideProviders';
 import MainNextNavBar from '@/components/ui/MainNextNavbar';
 const inter = Inter({ subsets: ['latin'] })
 
+
+
+
+
 export const metadata: Metadata = {
-  title: 'Monet~Api as a service',
-  description: 'tailor made api to suit your needs',
-}
+	title: "Monet~Api as a service",
+	description: "tailor made api to suit your needs",
+	icons: [
+		{
+			rel: "icon",
+			href: '../../public/logo.png', 
+			url : '../../public/logo.png',
+		}
+	]
+
+};
 
 export default function RootLayout({
   children,
