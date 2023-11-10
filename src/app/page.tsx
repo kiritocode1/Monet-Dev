@@ -10,8 +10,18 @@ const MonetDisplayFont = localFont({
 });
 import { RecognitionFont } from "@/utils/fonts";
 
+const get_data = async () => {
+	const data = await fetch("http://localhost:3000/api/hello/");
+	console.log(data.ok);
+	const hehe =  await data.json();
+	return hehe;
+}
 
-export default function Home() {
+
+
+
+export default async function Home () {
+	const hehe = await get_data();
 	return (
 		<div className="min-h-screen w-full">
 			
@@ -28,6 +38,9 @@ export default function Home() {
 				<Button color="secondary" size="lg" variant="light" >
 					Learn More <ArrowRightSquare size={24} />
 				</Button>
+			</div>
+			<div>
+				{JSON.stringify(hehe)}
 			</div>
 		</div>
 	);

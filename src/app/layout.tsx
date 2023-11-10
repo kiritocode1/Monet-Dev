@@ -9,17 +9,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 
-
 export const metadata: Metadata = {
 	title: "Monet~Api as a service",
 	description: "tailor made api to suit your needs",
-	icons: [
-		{
-			rel: "icon",
-			href: '../../public/logo.png', 
-			url : '../../public/logo.png',
-		}
-	]
+
 
 };
 
@@ -30,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
 		<Providers>
-			<html lang="en">
+		  <html lang="en">
+			  <head>
+				  <link rel='icon' href='/public/logo.png'  sizes='any'/>
+			  </head>
 				<body className={inter.className}>
 					<ClientSideProviders>
 					  <main className='dark text-foreground bg-background'>
