@@ -24,9 +24,6 @@ export default function RootLayout({
   return (
 		<Providers>
 		  <html lang="en">
-			  <head>
-				  <link rel='icon' href='/public/logo.png'  sizes='any'/>
-			  </head>
 				<body className={inter.className}>
 					<ClientSideProviders>
 					  <main className='dark text-foreground bg-background'>
